@@ -4,17 +4,13 @@ on:
   push:
     branches:
     - master
-    
-runs:
-  using: 'node16'
-  main: 'main.js'
 
 jobs:
   cd:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install
         run: npm run build
       - name: Deploy
