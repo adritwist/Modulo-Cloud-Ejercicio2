@@ -4,6 +4,10 @@ on:
   push:
     branches:
     - master
+    
+runs:
+  using: 'node16'
+  main: 'main.js'
 
 jobs:
   cd:
